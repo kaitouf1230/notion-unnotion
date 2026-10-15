@@ -1,0 +1,28 @@
+{
+  "name": "notion-unnotion",
+  "version": "1.0.1",
+  "description": "Face-to-face live translation on iPhone, logged to Notion (N-Translator)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "cloudflare": {
+    "bindings": {
+      "SONIOX_API_KEY": {
+        "description": "Soniox の API キー（console.soniox.com で発行）/ Soniox API key"
+      },
+      "ACCESS_KEY": {
+        "description": "翻訳画面を開くための合言葉。16文字以上（20文字以上のランダムな文字列がおすすめ）/ Passphrase to open the app, at least 16 characters (20+ random recommended)"
+      },
+      "NOTION_TOKEN": {
+        "description": "Notion の内部接続の API トークン（ntn_ で始まる）/ Notion internal connection token (starts with ntn_)"
+      }
+    }
+  }
+}
